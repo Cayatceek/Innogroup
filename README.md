@@ -1,10 +1,40 @@
-## Run Locally
+# Innogroup
 
-**Prerequisites:**  Node.js
+Одностраничный сайт с каталогом категорий, портфолио, материалами, ценовыми предложениями и этапами работы. Интерфейс собран из отдельных React-компонентов и включает анимации при прокрутке.
 
+## Стек
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+React 19, TypeScript, Vite, Tailwind CSS 4, Motion и Lucide.
+
+## Запуск
+
+Из корня репозитория:
+
+```bash
+npm ci
+npm run dev
+```
+
+Сервер разработки доступен на `http://localhost:3000`.
+
+## Проверка и сборка
+
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+Команда `lint` выполняет проверку TypeScript. Статическая сборка создаётся в `dist/`.
+
+## Структура
+
+- [src/App.tsx](src/App.tsx) — порядок секций страницы.
+- [src/components](src/components/) — Hero, Portfolio, Pricing, FAQ и другие секции.
+- [src/index.css](src/index.css) — оформление.
+- [vite.config.ts](vite.config.ts) — настройки сборки.
+- [.env.example](.env.example) — пример конфигурации окружения.
+
+## Настройка
+
+Тексты, предложения и контактные данные редактируются в компонентах соответствующих секций. Перед публикацией проверьте фактические цены, ссылки и контакты. Наличие библиотеки Gemini в зависимостях само по себе не означает наличие работающего AI-сервиса; отдельный сервер API в этом репозитории не представлен.
